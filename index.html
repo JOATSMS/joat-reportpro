@@ -13,11 +13,11 @@ body {
   margin: 0;
 }
 
-/* BACK HOME BUTTON FIXED */
+/* BACK HOME BUTTON FIXED (IMPROVED FEELING) */
 .back-home {
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 12px;
+  left: 12px;
   display: inline-block;
   padding: 10px 14px;
   background: #004080;
@@ -28,6 +28,7 @@ body {
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   z-index: 9999;
+  transition: 0.3s ease;
 }
 
 .back-home:hover {
@@ -35,11 +36,11 @@ body {
   transform: scale(1.05);
 }
 
-/* FORM CONTAINER */
+/* FORM CONTAINER (BETTER BALANCE) */
 #formContainer {
   max-width: 500px;
   width: 100%;
-  margin: 60px auto 20px; /* extra top space for fixed button */
+  margin: 85px auto 20px; /* ⬅ FIXED: better visual balance */
   background: #ffffff;
   border-radius: 10px;
   padding: 30px 25px;
@@ -179,8 +180,8 @@ button:disabled {
 /* RESPONSIVE */
 @media (max-width: 600px) {
   #formContainer {
+    margin: 75px 15px 15px; /* ⬅ FIXED for mobile */
     padding: 20px 15px;
-    margin: 70px 15px 15px;
   }
 
   .form-row {
