@@ -1,4 +1,4 @@
-<!DOCTYPE html>   
+<!DOCTYPE html>    
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,10 +13,33 @@ body {
   margin: 0;
 }
 
+/* BACK HOME BUTTON FIXED */
+.back-home {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  padding: 10px 14px;
+  background: #004080;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
+.back-home:hover {
+  background: #003060;
+  transform: scale(1.05);
+}
+
+/* FORM CONTAINER */
 #formContainer {
   max-width: 500px;
   width: 100%;
-  margin: 20px auto;
+  margin: 60px auto 20px; /* extra top space for fixed button */
   background: #ffffff;
   border-radius: 10px;
   padding: 30px 25px;
@@ -50,19 +73,6 @@ body {
   color: #666;
   margin-top: 4px;
   font-style: italic;
-}
-
-.back-home {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #004080;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.back-home:hover {
-  text-decoration: underline;
 }
 
 h2 {
@@ -166,10 +176,11 @@ button:disabled {
   border: 1px solid #c3e6cb;
 }
 
+/* RESPONSIVE */
 @media (max-width: 600px) {
   #formContainer {
     padding: 20px 15px;
-    margin: 15px;
+    margin: 70px 15px 15px;
   }
 
   .form-row {
@@ -221,9 +232,12 @@ button:disabled {
 
 <body>
 
-<div id="formContainer">
+<!-- BACK HOME BUTTON -->
+<a href="https://JOATSMS.github.io/joat-technologies/" class="back-home">
+  ← Back to Home
+</a>
 
-<a href="https://JOATSMS.github.io/joat-technologies/" class="back-home">← Back to Home</a>
+<div id="formContainer">
 
 <div class="logo">
   <img src="Mylogo.png" alt="JOAT ReportPro Logo">
