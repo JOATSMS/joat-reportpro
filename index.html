@@ -1,0 +1,312 @@
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOAT ReportPro Download</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  padding: 10px;
+  margin: 0;
+}
+
+#formContainer {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 120px;
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-title {
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #004080;
+  letter-spacing: 1px;
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.back-home {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #004080;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004080;
+  font-size: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+input {
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border 0.3s;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #0066ff;
+  outline: none;
+}
+
+button, #downloadLink a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button {
+  background: #0066ff;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #0051cc;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#downloadLink {
+  display: none;
+  margin-top: 20px;
+}
+
+#downloadLink a {
+  background: #28a745;
+  color: #fff;
+}
+
+#downloadLink a:hover {
+  background: #1f8f3e;
+  transform: scale(1.03);
+}
+
+#message {
+  display: none;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.error {
+  background: #fdecea;
+  color: #a94442;
+  border: 1px solid #f5c6cb;
+}
+
+.success {
+  background: #e6fffa;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+@media (max-width: 600px) {
+  #formContainer {
+    padding: 20px 15px;
+    margin: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 40%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  #formContainer {
+    padding: 15px 10px;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .logo-title {
+    font-size: 18px;
+  }
+
+  .logo-subtitle {
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  button, #downloadLink a {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="formContainer">
+
+<a href="https://https://joatsms.github.io/joat-technologies/" class="back-home">← Back to Home</a>
+
+<div class="logo">
+  <img src="Mylogo.png" alt="JOAT ReportPro Logo">
+  <div class="logo-title">JOAT ReportPro</div>
+  <div class="logo-subtitle">Official 2026 Release</div>
+</div>
+
+<h2>Fill Your Info to Download</h2>
+
+<div class="form-row">
+  <input type="text" id="school" placeholder="School Name" required>
+  <input type="text" id="country" placeholder="Country" required>
+</div>
+
+<div class="form-row">
+  <input type="text" id="region" placeholder="Region / State" required>
+  <input type="email" id="email" placeholder="Email Address" required>
+</div>
+
+<div id="message"></div>
+
+<button id="submitBtn" onclick="submitForm()">Submit & Get Download</button>
+
+<div id="downloadLink">
+  <a href="https://github.com/JOATSMS/School_sms_2026/releases/download/v2026.1/JOAT_SMS_2026_Setup.zip" download>
+    Download JOAT ReportPro
+  </a>
+</div>
+
+</div>
+
+<script>
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbzUfQHzdcWcxZ57Amh37-9Xq5A2GWShS_VeuIzIc4GZXgQrzQbxqXmCZslTbDiVqmkISA/exec";
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+function showMessage(text, type) {
+  const msg = document.getElementById("message");
+  msg.innerText = text;
+  msg.className = type;
+  msg.style.display = "block";
+}
+
+function submitForm() {
+  const school = document.getElementById("school").value.trim();
+  const country = document.getElementById("country").value.trim();
+  const region = document.getElementById("region").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const btn = document.getElementById("submitBtn");
+
+  if (!school || !country || !region || !email) {
+    showMessage("All fields are required.", "error");
+    return;
+  }
+
+  if (!EMAIL_REGEX.test(email)) {
+    showMessage("Please enter a valid email address.", "error");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.innerText = "Processing...";
+  showMessage("Submitting your information, please wait…", "success");
+
+  fetch(WEB_APP_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ school, country, region, email })
+  })
+  .then(() => {
+    showMessage("Successfully. You may now download the software", "success");
+    document.getElementById("downloadLink").style.display = "block";
+    document.getElementById("downloadLink").scrollIntoView({ behavior: "smooth" });
+  })
+  .catch(() => {
+    showMessage("A network error occurred. Please try again.", "error");
+    btn.disabled = false;
+    btn.innerText = "Submit & Get Download";
+  });
+}
+</script>
+
+</body>
+</html>
