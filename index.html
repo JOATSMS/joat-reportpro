@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JOAT SMS 2026 Download</title>
+<title>JOAT ReportPro Download</title>
 
 <style>
 body {
@@ -226,8 +226,8 @@ button:disabled {
 <a href="https://joatsms.github.io/joat-sms/" class="back-home">← Back to Home</a>
 
 <div class="logo">
-  <img src="Mylogo.png" alt="JOAT SMS Logo">
-  <div class="logo-title">JOAT SMS 2026</div>
+  <img src="Mylogo.png" alt="JOAT ReportPro Logo">
+  <div class="logo-title">JOAT ReportPro</div>
   <div class="logo-subtitle">Official 2026 Release</div>
 </div>
 
@@ -247,10 +247,9 @@ button:disabled {
 
 <button id="submitBtn" onclick="submitForm()">Submit & Get Download</button>
 
-<!-- ✅ FIXED DOWNLOAD LINK -->
 <div id="downloadLink">
   <a href="https://github.com/JOATSMS/School_sms_2026/releases/download/v2026.1/JOAT_SMS_2026_Setup.zip" download>
-    Download JOAT SMS 2026
+    Download JOAT ReportPro
   </a>
 </div>
 
@@ -297,10 +296,7 @@ function submitForm() {
     body: JSON.stringify({ school, country, region, email })
   })
   .then(() => {
-    showMessage(
-      "Successfully. You may now download the software",
-      "success"
-    );
+    showMessage("Successfully. You may now download the software", "success");
     document.getElementById("downloadLink").style.display = "block";
     document.getElementById("downloadLink").scrollIntoView({ behavior: "smooth" });
   })
